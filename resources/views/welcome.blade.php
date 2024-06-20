@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ ucfirst($theme) }} Products</title>
+    <title>Products</title>
 </head>
 <body>
-    <h1>{{ ucfirst($theme) }} Products</h1>
+    <h1>Products</h1>
     <ul>
-        @foreach ($products as $product)
-            <li>{{ $product['name'] }} - ${{ $product['price'] }}</li>
+        @foreach ()
+            <li>{{$movies['name'] }} - ${{$movies['price'] }}</li>
         @endforeach
     </ul>
 </body>
