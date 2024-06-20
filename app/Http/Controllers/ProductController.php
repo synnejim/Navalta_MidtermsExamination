@@ -8,15 +8,17 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $movies = array (
-            'title1' => 'THE INVISIBLE MAN',
-            'Directed By' => 'Leigh Whannell',
-            'title2' => 'NEVER RARELY SOMETIMES ALWAYS',
-            'Directed By' => 'Eliza Hittman',
-            'title2' => 'HAMILTONS',
-            'Directed By' => 'Thomas Kail'
-        );
+        $movies = [
+            ['title'=>'THE INVISIBLE MAN',
+            'DirectedBy' => 'Leigh Whannell' ], 
 
-        return view('welcome', $movies);
+            ['title'=> 'NEVER RARELY SOMETIMES ALWAYS',
+            'DirectedBy' => 'Eliza Hittman' ],
+
+            ['title' => 'HAMILTONS',
+            'DirectedBy' => 'Thomas Kail']
+        ];
+
+        return view('welcome', compact('movies'));
     }
 }

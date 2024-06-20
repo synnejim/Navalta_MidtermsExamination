@@ -8,8 +8,9 @@
 <body>
     <h1>Products</h1>
     <ul>
-        @foreach ()
-            <li>{{$movies['name'] }} - ${{$movies['price'] }}</li>
+        @foreach ($movies as $movie)
+            <li>{{ $movie['title'] }}</li>
+            <li>{{  $movie['DirectedBy'] }}</li>
         @endforeach
     </ul>
 </body>
